@@ -1,0 +1,49 @@
+# Project 1 Edition A
+
+## Decision and user
+
+This valuation is for an analyst deciding whether Amazon is worth researching in more detail. The decision is whether to move forward with a full valuation or wait for more evidence.
+
+## Company
+
+- **Company:** Amazon.com, Inc.
+- **Ticker:** AMZN
+- **Valuation date:** September 1, 2026
+
+## Initial thesis
+
+**Action: Watch–defer.** Amazon has strong AWS growth and a large cash balance, but I need to build a full valuation before taking a position. I also need to understand whether Amazon's large spending will produce enough future cash flow.
+
+## Known evidence
+
+- **Primary filing:** [Amazon.com, Inc. Form 10-K](https://www.sec.gov/Archives/edgar/data/1018724/000101872426000004/amzn-20251231.htm)
+- **Reporting period:** 2025.
+- **Filing date:** February 2026.
+- **Currency and statement units:** U.S. dollars; stated in millions
+- **Diluted-share evidence and convention:** Amazon used 10,827 million weighted-average diluted shares for 2025 EPS. This includes 10,656 million basic shares and 171 million shares from the dilutive effect of stock awards.
+- **Cash:** $86,810 million of cash and cash equivalents as of December 31, 2025
+- **Debt:** $68,836 million in total face value of long-term debt at December 31, 2025. The balance-sheet long-term debt amount was $65,648 million after discounts, issuance costs, and the current portion.
+- **Operating-value driver:** AWS sales grew 20% in 2025. The filing says the increase mainly came from higher customer usage.
+
+## Consequential assumptions
+
+1. AWS can keep growing and maintain enough margin to support Amazon's infrastructure.
+2. I will use enterprise value and clearly explain how I treat cash, debt, leases, and diluted shares in the bridge to equity value.
+
+## Unknowns
+
+1. What margin and reinvestment rate make sense after considering data-center and AI infrastructure spending?
+2. Does Amazon's market price already assume very strong growth and margins?
+
+## Research plan
+
+1. Pull historical revenue, operating income, depreciation, and working-capital data from Amazon's filings.
+2. Forecast revenue, operating margin, taxes, reinvestment, and growth.
+3. Build a WACC model, bridge enterprise value to equity value, and run analysis.
+4. Read the latest 10-Q for evidence that supports or weakens the AWS-growth and infrastructure-spending assumptions.
+
+## Partner falsification question
+
+- **Question:** 
+- **Why it matters:** The answer could change the decision if it shows that Amazon'a margins are weakening or that capital spending is not leading to enough future cash flow.
+
