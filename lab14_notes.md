@@ -86,3 +86,56 @@ My partner and I explained diversification and discussed how portfolio weights, 
 We exchanged our `portfolio.py` files and checked the three baseline results. We also tested an invalid correlation of 1.3 to verify that the program rejected the input.
 
 Finally, we discussed why inverse volatility concentrates in Treasury bills and which portfolio we would present to Meridian's CIO.
+
+# Lab 15 — Portfolio Stability Decision
+## Project 2 Portfolio Analysis
+
+The purpose of this analysis is to identify the lowest-risk portfolio that satisfies the investment objective and reserve requirements. The Meridian training portfolio uses Treasury bills, Treasury 10-year notes, investment-grade bonds, and global equities.
+
+The investment objective is a minimum expected return of 6.5%, with at least 3% invested in reserve-eligible assets.
+
+## Portfolio Stability
+
+The Meridian baseline solution is 0% Treasury bills, 20% Treasury 10-year notes, 25% investment-grade bonds, and 55% global equities, producing a 6.51% expected return and 9.44% volatility.
+
+When the equity return estimate decreases from 8% to 7%, the recommended allocation changes to 0% Treasury bills, 10% Treasury 10-year notes, 10% investment-grade bonds, and 80% global equities.
+
+The largest allocation change is 25 percentage points. This demonstrates that relatively small changes in assumptions can significantly affect optimization results.
+
+## Sensitivity and Estimation Risk
+
+Estimation risk occurs because expected returns, volatility, and correlations are uncertain. An optimizer may amplify these uncertainties when selecting the portfolio with the lowest estimated risk.
+
+The Meridian example illustrates this problem because changing one expected return assumption results in a substantial allocation change.
+
+## Partner Attack — Example Discussion
+
+A useful challenge would be questioning the reliability of the equity return estimate. Lowering the equity return assumption by one percentage point changes the portfolio substantially, suggesting that the allocation should not be accepted without further testing.
+
+This is an illustrative challenge, not a completed partner review.
+
+## Investment Decision
+
+**Decision: Pilot.**
+
+I would pilot the Meridian allocation rather than adopt it immediately. Although the optimization meets the stated return and reserve requirements, its sensitivity to expected return estimates raises concerns about stability.
+
+I would reconsider adoption after reviewing additional historical data, testing alternative assumptions, and obtaining clarification about the calendar-year loss constraint.
+
+## Reflection
+
+The lowest-risk portfolio changed because the optimization process attempts to meet the investment objective while minimizing volatility. When estimated returns change, the optimizer may need to select a significantly different allocation to satisfy the objective.
+
+Before adopting the recommendation, I would want greater confidence in the assumptions and evidence that the allocation remains reasonably stable under different market conditions.
+
+## Remaining Verification
+
+- Meridian results: Verify directly in Streamlit.
+- Own-universe data sources and download dates: Not yet documented.
+- All-month portfolio optimization: Not yet tested.
+- Last-36-month optimization: Not yet tested.
+- Partner review: Not yet conducted.
+
+## AI Assistance
+
+AI was used to help develop the portfolio optimization functions, Streamlit application, and explanations. The investment decision requires independent review of the model's assumptions and outputs.
