@@ -106,3 +106,23 @@ The difference between the 60-month and 36-month results demonstrates why histor
 **My response:** The optimizer increased VT's allocation by five percentage points despite its lower expected return because it needed additional equity exposure to satisfy the 6.5% objective. This increased estimated volatility and reinforced my decision to pilot the allocation rather than adopt it without further sensitivity testing.
 
 **Conclusion:** Both portfolios meet the return and reserve requirements, but the allocation is sensitive to the expected equity return assumption. This illustrates estimation risk and the importance of testing investment assumptions before making allocation decisions.
+
+## Portfolio Engine Flowchart
+
+The following diagram shows how my Lab 15 portfolio engine estimates risk and searches for the lowest-risk feasible allocation.
+
+```mermaid
+flowchart TD
+    A["Upload prices.csv"] --> B["Calculate monthly returns"]
+    B --> C["Estimate annual returns and volatility"]
+    B --> D["Calculate asset correlations"]
+    C --> E["Build portfolio covariance matrix"]
+    D --> E
+    E --> F["Generate long-only allocations in 5% steps"]
+    F --> G{"Meet expected return and reserve constraints?"}
+    G -->|No| H["Reject allocation"]
+    G -->|Yes| I["Calculate portfolio volatility"]
+    I --> J["Keep allocation with lowest volatility"]
+    J --> K["Show weights, return, volatility and reserve weight"]
+    K --> L["Compare all-month and 36-month results"]
+```
